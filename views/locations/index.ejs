@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class='container'>
+        <div class='container-fluid first-text'>
+            <h1 class='title'>Welcome to WeddLoc!</h1>
+            <p class='subtitle'>View our most amazing wedding locations from all over the world</p>
+            <p>
+                <a class='btn btn-lg btn-primary' href='/locations/new'>Add new location</a>
+            </p>
+        </div>
+    </header>
+    
+    
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% locations.forEach(function(location){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                       <img src="<%= location.image %>">
+                       <div class="caption">
+                           <h4><%= location.name %></h4>
+                       </div>
+                       <p>
+                           <a href='/locations/<%= location._id %>' class='btn btn-primary'>More info</a>
+                       </p>
+                    </div>
+                </div>
+            <% }); %>
+    </div>   
+</div>
+        
+<% include ../partials/footer %>
