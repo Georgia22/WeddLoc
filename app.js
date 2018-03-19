@@ -18,8 +18,8 @@ const commentRoutes  = require('./routes/comments'),
 
 
 
-mongoose.connect('mongodb://localhost/wedd_loc');
-//mongoose.connect('mongodb://alina:alina22@ds115749.mlab.com:15749/weddloc');
+//mongoose.connect('mongodb://localhost/wedd_loc');
+mongoose.connect('mongodb://alina:alina22@ds115729.mlab.com:15729/wedd-loc');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
